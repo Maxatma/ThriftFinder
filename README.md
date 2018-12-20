@@ -1,3 +1,24 @@
 # ThriftFinder
+ThriftFinder -  finds needed Realm classes from thrift text file
+used by [[ThriftConvertor]](https://github.com/Maxatma/ThriftConvertor).
 
-A description of this package.
+Example usage: 
+
+        //instantiate finder
+        let finder             = Finder()
+        
+        //finds class name in thrift file
+        let thriftClassesNames = finder.findAllClassNamesIn(text: thriftText)
+        
+        //finds all enums
+        let thriftEnumsNames   = finder.findAllEnumsNamesIn(text: thriftText)
+        
+        //creates [ThriftClass] array, so you able to do with it everything you want to. 
+        //ThriftConvertor create Realm classes and mappers from it.
+        let classes            = finder.createTrfitClassesFrom(text: thriftText)
+
+
+## Contacts
+
+Aleksandr Zaporozhchenko
+[[github]](https://github.com/Maxatma)  [[gmail]](mailto:maxatma.ids@gmail.com)  [[fb]](https://www.facebook.com/profile.php?id=100008291260780)  [[in]](https://www.linkedin.com/in/maxatma/)
